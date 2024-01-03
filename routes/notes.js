@@ -2,10 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Note = require('../models/Note');
 
-// Middleware to verify the token (Assuming you have this implemented)
 const verifyToken = require('../middleware/verifyToken');
 
-// Get all notes of the authenticated user
 router.get('/', verifyToken, async (req, res) => {
     try {
         const notes = await Note.find({ createdBy: req.user._id });
@@ -15,7 +13,6 @@ router.get('/', verifyToken, async (req, res) => {
     }
 });
 
-// Get a single note by ID
 router.get('/:id', verifyToken, async (req, res) => {
     try {
         const note = await Note.findOne({ _id: req.params.id, createdBy: req.user._id });
@@ -26,7 +23,6 @@ router.get('/:id', verifyToken, async (req, res) => {
     }
 });
 
-// Create a new note
 router.post('/', verifyToken, async (req, res) => {
     try {
         const newNote = new Note({

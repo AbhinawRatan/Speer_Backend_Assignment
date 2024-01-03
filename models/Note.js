@@ -13,15 +13,14 @@ const noteSchema = new mongoose.Schema({
     },
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User', // Assuming you have a User model
+        ref: 'User', 
         required: true
     }
-    // Add other fields or options as needed
+    
 }, {
-    timestamps: true // Adds createdAt and updatedAt timestamps
+    timestamps: true 
 });
 
-// Creating a text index for title and content for search functionality
 noteSchema.index({ title: 'text', content: 'text' });
 
 const Note = mongoose.model('Note', noteSchema);

@@ -10,9 +10,7 @@ describe('Notes API', () => {
     let noteId; // Store the ID of the created note here
 
     before((done) => {
-        // Add code to register a user and obtain an authentication token
-        // You can use the /api/auth/signup and /api/auth/login endpoints for this
-        // Store the token in the authToken variable for use in the tests
+
         done();
     });
 
