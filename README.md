@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<h1>Sheer_Backend_Assignment</h1>
+<h1>Speer_Backend_Assignment</h1>
 <h1>Your Note App</h1>
 
 <p>Your Note App is a secure and scalable RESTful API that allows users to create, manage, and share notes. Users can also search for notes based on keywords. This project is built with Node.js, Express.js, MongoDB, and JWT for authentication.</p>
